@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья: Некроман</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #312f45;
+            color: white;
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .article-title {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .photo {
+            width: 30%;
+        }
+
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .description {
+            width: 60%;
+            font-size: 18px;
+        }
+
+        .sections {
+            margin-top: 30px;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sections h3 {
+            background-color: #4c4b6b;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sections div {
+            display: none;
+            padding: 10px;
+            background-color: #3c3b58;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .sections h3 span {
+            transition: transform 0.3s ease;
+        }
+
+        .footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <h1>DANIL WIKI</h1>
+        </header>
+
+        <nav>
+            <a href="seasons.html">сезоны</a>
+            <a href="Danil_website.html">Главная страница</a>
+            <a href="danil.html">Данил</a>
+            <a href="#" onclick="randomArticle()">исследовать</a>
+        </nav>
+
+        <h1 class="article-title">Некроман</h1>
+
+        <div class="content">
+            <div class="photo">
+                <img src="Necroman.jpg" alt="Фото персонажа">
+            </div>
+            <div class="description">
+                <p>Некроман — один из главных антагонистов второго сезона "Магический Мир". Несмотря на то, что многие ошибочно называют его "Некромантом", его истинное имя — Некроман. Он является могущественным существом, обладающим способностями призывать нежить и управлять силами тьмы. Его присутствие в сериале символизирует угрозу, с которой Данил уже столкнулся.</p>
+            </div>
+        </div>
+
+        <div class="sections">
+            <h3>Битва<span>&#9660;</span></h3>
+            <div>
+                <p>Некроман впервые появляется во второй серии, когда Данил оказывается перед троном, на котором это существо возвышается в воздухе. В их битве Некроман оказывается грозным противником: он призывает скелетов и зомби, а также наносит мощные удары. Для Данила эта схватка становится настоящим испытанием, ведь Некроман управляет монстрами с необычайной лёгкостью, показывая свою силу и доминирование.</p>
+            </div>
+
+            <h3>Артефакты<span>&#9660;</span></h3>
+            <div>
+                <p>Некроман не просто сильный враг, он также владеет уникальными артефактами, такими как его посох, который обладает магическими свойствами. После его поражения Данил завладевает этими предметами, что даёт ему новое преимущество в его приключениях. Посох Некромана может призывать нежить, а маска, связанная с этим персонажем, имеет особенные свойства, которые до конца не раскрыты.</p>
+            </div>
+
+            <h3>Итог <span>&#9660;</span></h3>
+            <div>
+                <p>Некроман — мощный антагонист в мире Данила, который вызывает страх и уважение. Его появление и способности добавляют сюжетной напряжённости, а борьба с ним становится одним из ключевых моментов второго сезона. Хотя его имя часто путают с "Некромантом", именно Некроман оставляет след в истории как один из самых запоминающихся противников Данила.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Daniil Wiki © 2024</p>
+        <a href="https://t.me/+fCsZIsTJaZQzMzJk">Связь</a>
+    </div>
+
+    <script>
+        // Скрипт для открытия и закрытия разделов
+        const sections = document.querySelectorAll('.sections h3');
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                const content = section.nextElementSibling;
+                const arrow = section.querySelector('span');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.display = 'block';
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+    // Массив с URL случайных статей и функция randomArticle
+    const articles = [
+        'danil.html',
+        'Fyudjin.html',
+        'blue-haired.html',
+        'Boss-skeleton-pirate.html',
+        'Mike.html',
+        'Linad.html',
+        'Boss.html', 
+        'Alliance.html',
+        'Bunker.html'
+    ];
+
+    function randomArticle() {
+        const randomArticleIndex = Math.floor(Math.random() * articles.length);
+        window.location.href = articles[randomArticleIndex];
+    }
+    </script>
+</body>
+</html>

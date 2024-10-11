@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIL WIKI</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            background-color: #312f45;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 30px 0;
+        }
+
+        .photo-day {
+            text-align: center;
+            background-color: #464653;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .photo-day img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .welcome {
+            text-align: left;
+            max-width: 500px;
+        }
+
+        .did-you-know {
+            background-color: #464653;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Исправление бага с увеличением текста */
+        .did-you-know ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 16px; /* фиксированный размер для фактов */
+        }
+
+        .did-you-know ul li {
+            margin-bottom: 10px;
+        }
+
+        .content p, .content li {
+            font-size: 16px; /* фиксированный размер для текста в статьях и контенте */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DANIL WIKI</h1>
+    </header>
+
+    <nav>
+        <a href="seasons.html">сезоны</a>
+        <a href="characters.html">персонажи</a>
+        <a href="danil.html">Данил</a>
+        <a href="#" onclick="randomArticle()">исследовать</a>
+    </nav>
+
+    <div class="content">
+        <div id="photoDay" class="photo-day">
+            <img id="photo" src="photos/photo1.jpg" alt="Фото дня">
+        </div>
+
+        <script>
+            // Массив с фото
+            const photos = [
+                'photos/photo1.jpg',
+                'photos/photo2.jpg',
+                'photos/photo3.jpg',
+                'photos/photo4.jpg',
+                'photos/photo5.jpg',
+                'photos/photo6.jpg',
+                'photos/photo7.jpg',
+                'photos/photo8.jpg',
+                'photos/photo9.jpg',
+                'photos/photo10.jpg',
+                'photos/photo11.jpg',
+                'photos/photo12.jpg',
+                'photos/photo13.jpg',
+                'photos/photo14.jpg',
+                'photos/photo15.jpg',
+                'photos/photo16.jpg',
+                'photos/photo17.jpg',
+                'photos/photo18.jpg',
+                'photos/photo19.jpg',
+                'photos/photo20.jpg'
+            ];
+
+            // Случайное фото
+            const randomIndex = Math.floor(Math.random() * photos.length);
+            document.getElementById('photo').src = photos[randomIndex];
+
+            // Массив с URL случайных статей
+            const articles = [
+                'danil.html',
+                'Fyudjin.html',
+                'blue-haired.html',
+                'Boss-skeleton-pirate.html',
+                'Mike.html',
+                'Linad.html',
+                'Boss.html', 
+                'Alliance.html',
+                'Necroman.html',
+                'Bunker.html'
+                // Добавь сюда все остальные страницы, на которые можно перенаправлять
+            ];
+
+            // Функция для случайного выбора и перехода на страницу
+            function randomArticle() {
+                const randomArticleIndex = Math.floor(Math.random() * articles.length);
+                window.location.href = articles[randomArticleIndex];
+            }
+        </script>
+
+        <div class="welcome">
+            <h2>Добро пожаловать в Danil Wiki!</h2>
+            <p> — место, где каждый поворот сюжета может удивить. От лесов до подворотен, здесь раскрываются истории, полные неожиданностей.</p>
+        </div>
+    </div>
+
+    <div class="did-you-know">
+        <h3>А вы знали?</h3>
+        <ul>
+            <li>Что события Новых Похождений происходят в 2041 году</li>
+            <li>Что у Данила есть неизвестный клон (которого неофициально зовут Линад)</li>
+            <li>Что в 6 серии новых похождений Данил нашёл неизвестную перчатку, способности которой ещё неизвестны</li>
+        </ul>
+    </div>
+
+    <!-- Кнопка для перехода в галерею персонажей -->
+    <div class="gallery-button" style="text-align: center; margin-top: 20px;">
+        <a href="gallery.html" style="color: white; background-color: #464652; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 20px;">Галерея</a>
+    </div>
+
+    <footer>
+        <p>DANIL WIKI 2024 &copy; | <a href="https://t.me/+fCsZIsTJaZQzMzJk">связь</a></p>
+    </footer>
+</body>
+</html>

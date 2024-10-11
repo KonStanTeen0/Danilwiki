@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи - DANIL WIKI</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            background-color: #312f45;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .character-list {
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .character-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .character-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .character-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .character-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DANIL WIKI</h1>
+    </header>
+
+    <nav>
+        <a href="seasons.html">сезоны</a>
+        <a href="Danil_website.html">Главная страница</a>
+        <a href="danil.html">Данил</a>
+        <a href="#" onclick="randomArticle()">исследовать</a>
+    </nav>
+
+    <div class="content">
+        <h2>Персонажи</h2>
+        <div class="character-list">
+            <div class="character-item">
+                <img src="images/fyudjin-small.jpg" alt="Фьюджин">
+                <a href="Fyudjin.html">Фьюджин</a>
+            </div>
+            <div class="character-item">
+                <img src="images/blue-haired-small.jpg" alt="Синеволосый">
+                <a href="blue-haired.html">Синеволосый</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Linad-small.jpg" alt="Линад">
+                <a href="Linad.html">Линад</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Mike-small.jpg" alt="Майк">
+                <a href="Mike.html">Майк</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Necroman-small.jpg" alt="Некроман">
+                <a href="Necroman.html">Некроман</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Boss_skeleton-pirate-small.jpg" alt="Б.С.П.">
+                <a href="Boss-skeleton-pirate.html">Босс-скелет-пират</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Bunker-small.jpg" alt="бункер">
+                <a href="Bunker.html">Бункер с красными дверми</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Nothing-small.jpg" alt="фон">
+                <a href="Boss.html">Боссы сезонов Данила</a>
+            </div>
+            <div class="character-item">
+                <img src="images/Nothing-small.jpg" alt="фон">
+                <a href="Alliance.html">Альянс</a>
+            </div>
+            <!-- Добавляй ссылки на других персонажей здесь -->
+        </div>
+    </div>
+
+    <footer>
+        <p>DANIL WIKI 2024 &copy; | <a href="https://t.me/+fCsZIsTJaZQzMzJk">связь</a></p>
+    </footer>
+</body>
+<script>
+    // Массив с URL случайных статей и функция randomArticle
+    const articles = [
+        'danil.html',
+        'Fyudjin.html',
+        'blue-haired.html',
+        'Boss-skeleton-pirate.html',
+        'Mike.html',
+        'Linad.html',
+        'Boss.html', 
+        'Alliance.html',
+        'Necroman.html',
+        'Bunker.html'
+    ];
+
+    function randomArticle() {
+        const randomArticleIndex = Math.floor(Math.random() * articles.length);
+        window.location.href = articles[randomArticleIndex];
+    }
+</script>
+</html>

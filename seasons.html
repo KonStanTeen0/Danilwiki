@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сезоны - Danil Wiki</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            background-color: #312f45;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 40px; 
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .season-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        .download-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #464652;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .download-button:hover {
+            background-color: #5d5d71;
+        }
+
+        .sections {
+            margin: 40px 0;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sections h3 {
+            background-color: #4c4b6b;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sections div {
+            display: none;
+            padding: 10px;
+            background-color: #3c3b58;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DANIL WIKI</h1>
+    </header>
+
+    <nav>
+        <a href="Danil_website.html">Главная страница</a>
+        <a href="characters.html">персонажи</a>
+        <a href="danil.html">Данил</a>
+        <a href="#" onclick="randomArticle()">исследовать</a>
+    </nav>
+
+    <!-- Первая статья -->
+    <div class="content">
+        <img src="novie_pohozhdeniya.jpg" alt="Фото сезона" class="season-image">
+        <div class="description">
+            <p>это первый сезон Minecraft-сериала с модами, созданный Данилом. Этот сезон начинается с простого приключения в лесу, но постепенно сюжет разворачивается в более сложные истории с магическими существами, битвами с боссами и постапокалиптическим миром. Действие сезона происходит в 2041 году, что добавляет уникальной атмосферы происходящему.</p>
+            <a href="НП.mp3" class="download-button" download>Скачать пересказ</a>
+        </div>
+    </div>
+
+    <!-- Основные разделы первой статьи -->
+    <div class="sections">
+        <h3>Начало<span>&#9660;</span></h3>
+        <div>
+            <p>Сезон начинается с того, как Данил оказывается в лесу и начинает строить своё убежище. В первой серии он сражается с многочисленными монстрами, создаёт энергетик и знакомится с таинственным персонажем по имени Фьюджин. Постепенно он узнаёт больше о мире вокруг него и вступает в борьбу за выживание, создавая оружие и исследуя мир, в котором оказался.</p>
+        </div>
+
+        <h3>События и финал<span>&#9660;</span></h3>
+        <div>
+            <p>В ходе сезона Данил сталкивается с различными угрозами, включая монстров, загадочные артефакты и странные личности, такие как Линад — его тёмное отражение. Главным испытанием становится битва с Эндер-драконом, которая завершает сезон. После победы Данил отдаёт драконье яйцо и переносится в новый мир, где его ждут дальнейшие приключения. Финал сезона заканчивается на интригующей ноте, когда Данил видит Линада в пустоте, подготавливая зрителя к новому сезону.</p>
+        </div>
+
+        <h3>Заключение <span>&#9660;</span></h3>
+        <div>
+            <p>"Новые Похождения" — это захватывающее начало приключений Данила, где он не только строит своё выживание в Minecraft, но и встречает множество интересных персонажей и сражается с опасными боссами. Этот сезон стал основой для всей серии и открыл двери для дальнейших сюжетных линий в "Магическом мире".</p>
+        </div>
+    </div>
+
+    <!-- Вторая статья -->
+    <div class="content">
+        <img src="Magicheskiy_mir.jpg" alt="Фото второго сезона" class="season-image">
+        <div class="description">
+            <p>"Магический Мир" — это второй сезон Minecraft-сериала с модами, созданного Данилом. В этом сезоне главный герой попадает в совершенно новую реальность, где магия, древние существа и альянсы воинов становятся частью его повседневной жизни. В отличие от первого сезона, "Магический Мир" погружает зрителя в фэнтезийные элементы и даёт Данилу возможность изучать магические силы.</p>
+            <a href="ММ.mp3" class="download-button" download>Скачать пересказ</a>
+        </div>
+    </div>
+
+    <!-- Основные разделы второй статьи -->
+    <div class="sections">
+        <h3>Начало<span>&#9660;</span></h3>
+        <div>
+            <p>Сезон начинается с того, как Данил попадает в необычный мир с деревней, где рыцари предлагают ему вступить в Альянс. Он сталкивается с новыми персонажами, такими как Майк, который хочет приютить Данила, и другими жителями деревни. Данил соглашается стать частью Альянса, который защищает деревню от монстров, и начинает сражаться с различными врагами, такими как зомби и нежить.</p>
+        </div>
+
+        <h3>Раздел 2 <span>&#9660;</span></h3>
+        <div>
+            <p>Одним из самых значительных врагов в сезоне становится Некроман, могущественный босс, которого Данил побеждает после сложного боя. Помимо этого, Данил сталкивается с ожившим воином в Аду и сражается с Боссом-скелетом-пиратом на корабле. В финале сезона Данил побеждает очередного босса, а затем с Альянсом празднует победу салютами. Однако, несмотря на видимый конец приключений, сезон оставляет задел на будущее, когда Данил снова встречает Линада в пустоте.</p>
+        </div>
+
+        <h3>Заключение <span>&#9660;</span></h3>
+        <div>
+            <p>"Магический Мир" расширяет вселенную Данила, вводя магические элементы и более сложные испытания. Этот сезон углубляет историю главного героя, развивая его как воина и исследователя, и подготавливает почву для следующих приключений.</p>
+        </div>
+    </div>
+
+<footer>
+    <p>DANIL WIKI 2024 &copy; | <a href="https://t.me/+fCsZIsTJaZQzMzJk">Связь</a></p>
+</footer>
+
+<style>
+    footer {
+        text-align: center;
+        background-color: black; /* Чёрный фон для футера */
+        color: white;
+        padding: 20px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    footer a {
+        color: white; /* Белый цвет для ссылки */
+        text-decoration: none;
+    }
+
+    footer a:visited {
+        color: white; /* Белый цвет для посещённых ссылок */
+    }
+
+    footer a:hover {
+        text-decoration: underline; /* Эффект подчеркивания при наведении */
+    }
+</style>
+
+    <script>
+        // Скрипт для открытия и закрытия разделов
+        const sections = document.querySelectorAll('.sections h3');
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                const content = section.nextElementSibling;
+                const arrow = section.querySelector('span');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.display = 'block';
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+// Массив с URL случайных статей
+const articles = [
+    'danil.html',
+    'Fyudjin.html',
+    'blue-haired.html',
+    'Boss-skeleton-pirate.html',
+    'Mike.html',
+    'Linad.html',
+    'Boss.hrml', 
+    'Alliance.html',
+    'Necroman.html',
+    'Bunker.html'
+    // Добавь сюда все остальные страницы, на которые можно перенаправлять
+];
+
+// Функция для случайного выбора и перехода на страницу
+function randomArticle() {
+    const randomArticleIndex = Math.floor(Math.random() * articles.length);
+    window.location.href = articles[randomArticleIndex];
+}
+    </script>
+</body>
+</html>

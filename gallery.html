@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея персонажей</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            background-color: #312f45;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Минимальная ширина 150px, но заполняет по ширине экрана */
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            max-width: 400px; /* Максимальная ширина */
+            max-height: 400px; /* Максимальная высота */
+            object-fit: contain; /* Сохраняет пропорции и помещает фото внутри рамки */
+            border-radius: 10px;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DANIL WIKI</h1>
+    </header>
+
+    <nav>
+        <a href="seasons.html">сезоны</a>
+        <a href="characters.html">персонажи</a>
+        <a href="danil.html">Данил</a>
+        <a href="#" onclick="randomArticle()">исследовать</a>
+    </nav>
+
+    <h2 style="text-align: center; margin-top: 20px;">Галерея</h2>
+
+    <div class="gallery">
+        <!-- Пример галереи -->
+         <div class="gallery-item">
+            <img src="gallery/danil_gallery1.jpg" alt="М. М. №6">
+            <p>Ночной городок </p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery2.jpg" alt="М. М. №6">
+            <p>Дневной городок</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery3.jpg" alt="М. М. №6">
+            <p>Альянс на запуске салюта</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery4.jpg" alt="М. М. №6">
+            <p>Салют!</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery5.jpg" alt="М. М. №6">
+            <p>Мёртвый воин</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery6.jpg" alt="М. М. №5">
+            <p>Цербер</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery7.jpg" alt="М. М. №5">
+            <p>Данил в пиратской шляпе</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery8.jpg" alt="М. М. №5">
+            <p>Павший БСП</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery9.jpg" alt="М. М. №5">
+            <p>Перчатка загорелась</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery10.jpg" alt="М. М. №5">
+            <p>БСП со спины</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery11.jpg" alt="М. М. №5">
+            <p>Лестница на свободу</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery12.jpg" alt="М. М. №5">
+            <p>Скелет схватывает Данила и садит в корабль</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery13.jpg" alt="М. М. №5">
+            <p>Перчатка потухла</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery14.jpg" alt="М. М. №5">
+            <p>Храм</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery15.jpg" alt="М. М. №4">
+            <p>Фотогеничный Данил</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery16.jpg" alt="М. М. №4">
+            <p>30 аметройдов</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery17.jpg" alt="М. М. 4">
+            <p>Анх</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery18.jpg" alt="М. М. №4">
+            <p>Заброшенная пустынная деревня</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery19.jpg" alt="М. М. №4">
+            <p>Синеволосая мумия</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery20.jpg" alt="М. М. №4">
+            <p>Аниме тяночка в пустыне</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery21.jpg" alt="М. М. №3">
+            <p>Данил заходит на борт корабля</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery22.jpg" alt="М. М. №2">
+            <p>Данил-некроман</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery23.jpg" alt="М. М. №2">
+            <p>Посох Некромана</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery24.jpg" alt="М. М. №2">
+            <p>Данил с маской Некромана</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery25.jpg" alt="М. М. №2">
+            <p>Некроман на троне</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery26.jpg" alt="М. М. №2">
+            <p>15 аметройдов</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery27.jpg" alt="М. М. №1">
+            <p>Рука без перчатки</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery28.jpg" alt="М. М. №1">
+            <p>Ферп рыцарь память</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery29.jpg" alt="М. М. №1">
+            <p>Бедный ферп...</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery30.jpg" alt="М. М. №1">
+            <p>Данил впервые на поле битвы</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery31.jpg" alt="М. М. №1">
+            <p>Вступить ли в альянс?</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery32.jpg" alt="М. М. №1">
+            <p>Корабль</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery33.jpg" alt="М. М. №1">
+            <p>Улица городка</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery34.jpg" alt="М. М. №1">
+            <p>Рыцарь на входе в городок</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery35.jpg" alt="М. М. №1">
+            <p>Перчатка синим не горит</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery36.jpg" alt="М. М. №1">
+            <p>Данил лежит на дороге</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery37.jpg" alt="М. М. №1">
+            <p>Данил в пустоте</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery38.jpg" alt="Н.П. №9">
+            <p>Ночная табличка "конец"</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery39.jpg" alt="НП №9">
+            <p>вечерняя табличка "конец"</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery40.jpg" alt="НП №9/ ММ №6">
+            <p>конец каждого сезона</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery41.jpg" alt="НП №9">
+            <p>Синеволосый чел на красивом фоне</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery42.jpg" alt="НП №9">
+            <p>Синеволосый чел и Фьюджин</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery43.jpg" alt="НП №9">
+            <p>Данил защищает своих жителей</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery44.jpg" alt="НП №8">
+            <p>Синеволосый чел в 8 серии</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery45.jpg" alt="НП №8">
+            <p>Фьюджин прячется от полиции  на балконе утром</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery46.jpg" alt="НП №8">
+            <p>Балкон Фьюджина</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery47.jpg" alt="НП №8">
+            <p>Фьюджин вернулся, дабы рассказать о проблеме с полицией</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery48.jpg" alt="НП №8">
+            <p>Небоскрёб, в котором живёт Фьюджин</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery49.jpg" alt="НП №8">
+            <p>Данил едет на закат</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery50.jpg" alt="НП №8">
+            <p>Б0мб@ Линада</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery51.jpg" alt="НП №7">
+            <p>Начальная комната дома, с красными дверьми </p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery52.jpg" alt="НП №7">
+            <p>Красная дверь</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery53.jpg" alt="НП №7">
+            <p>Секс-игрушка Данила</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery54.jpg" alt="НП №6">
+            <p>Данил с перчаткой</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery55.jpg" alt="НП №6">
+            <p>Первое появление перчатки</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery56.jpg" alt="НП №6">
+            <p>Гараж Данила</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery57.jpg" alt="НП №6">
+            <p>Данил полубомж</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery58.jpg" alt="НП №6">
+            <p>Данил катается на новой машине</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery59.jpg" alt="НП №6">
+            <p>Крипер взорвал один из домов (без жертв)</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery60.jpg" alt="НП №6">
+            <p>Ночная дверь</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery61.jpg" alt="НП №6">
+            <p>Протестировал кирку</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery62.jpg" alt="НП №5">
+            <p>Дневная мини-деревня</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery63.jpg" alt="НП №5">
+            <p>Ночная мини-деревня</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery64.jpg" alt="НП №5">
+            <p>Данил строит дом в лесу</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery65.jpg" alt="НП №4">
+            <p>Данила задерживает полиция</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery66.jpg" alt="НП №4">
+            <p>Данил ездит по метро</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery67.jpg" alt="НП №3">
+            <p>Синеволосый чел сидит на крыше</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery68.jpg" alt="НП №3">
+            <p>Фьюджин подарил телефон Данилу</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery69.jpg" alt="НП №3">
+            <p>Данил нашёл оранжевые очки</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery70.jpg" alt="НП №2">
+            <p>Фьюджин шпионит</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery71.jpg" alt="НП №2">
+            <p>Новое место для жилья</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery72.jpg" alt="НП №2">
+            <p>Друзья Фьюджина</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery73.jpg" alt="НП №2">
+            <p>Фьюджин в городе</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery74.jpg" alt="НП №1">
+            <p>Новый знакомый по имени Фьюджин</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery75.jpg" alt="НП №1">
+            <p>Первый убитый зомби за весь сериал Данила</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery76.jpg" alt="НП №1">
+            <p>Данилу приходит идея сделать энергетик</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery77.jpg" alt="НП №1">
+            <p>Первая локация, первые секунды, первые впечатления</p>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/danil_gallery78.gif" alt="НП №2">
+            <p>Утопленник-стриптезёр</p>
+        </div>
+        <!-- Добавь сюда другие персонажи -->
+    </div>
+
+    <footer>
+        <p>DANIL WIKI 2024 &copy; | <a href="https://t.me/+fCsZIsTJaZQzMzJk">связь</a></p>
+    </footer>
+</body>
+<script>
+    // Массив с URL случайных статей и функция randomArticle
+    const articles = [
+        'danil.html',
+        'Fyudjin.html',
+        'blue-haired.html',
+        'Boss-skeleton-pirate.html',
+        'Mike.html',
+        'Linad.html',
+        'Boss.html', 
+        'Alliance.html',
+        'Necroman.html',
+        'Bunker.html'
+    ];
+
+    function randomArticle() {
+        const randomArticleIndex = Math.floor(Math.random() * articles.length);
+        window.location.href = articles[randomArticleIndex];
+    }
+</script>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья: Линад</title>
+    <style>
+        @font-face {
+            font-family: 'Pixel Digivolve Cyrillic';
+            src: url('fonts/3997-font.otf.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #312f45;
+            color: white;
+            font-family: 'Pixel Digivolve Cyrillic', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #312f45;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #464652;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: #5d5d71;
+        }
+
+        .article-title {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .photo {
+            width: 30%;
+        }
+
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .description {
+            width: 60%;
+            font-size: 18px;
+        }
+
+        .sections {
+            margin-top: 30px;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sections h3 {
+            background-color: #4c4b6b;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sections div {
+            display: none;
+            padding: 10px;
+            background-color: #3c3b58;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .sections h3 span {
+            transition: transform 0.3s ease;
+        }
+
+        .footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <h1>DANIL WIKI</h1>
+        </header>
+
+        <nav>
+            <a href="seasons.html">сезоны</a>
+            <a href="Danil_website.html">Главная страница</a>
+            <a href="danil.html">Данил</a>
+            <a href="#" onclick="randomArticle()">исследовать</a>
+        </nav>
+
+        <h1 class="article-title">Линад</h1>
+
+        <div class="content">
+            <div class="photo">
+                <img src="Linad.jpg" alt="Фото персонажа">
+            </div>
+            <div class="description">
+                <p>Линад — это персонаж, которого многие называют «клоном Данила», но это более сложная и загадочная личность, созданная в серии "Новые Похождения". Линад является своеобразным зеркалом главного героя, с которым у Данила происходят ключевые взаимодействия в последней части сериала. Хотя имя Линад нигде прямо не упоминается, оно представляет собой обратное написание имени "Данил", что подчёркивает его роль как тёмного отражения главного персонажа.</p>
+            </div>
+        </div>
+
+        <div class="sections">
+            <h3>Линад в Н.П.<span>&#9660;</span></h3>
+            <div>
+                <p>Линад появляется в финальных сериях первого сезона "Новые Похождения". Данил встречает его в зловещем доме с красными дверями. Там Линад предлагает Данилу уничтожить этот странный мир, что сразу поднимает вопрос о его истинных намерениях. Линад символизирует внутренние конфликты Данила, отражая его страхи и стремления к свободе, которые Данил не всегда может осознать. Взаимодействие между Данилом и Линадом носит напряжённый характер, и, хотя Данил соглашается помочь Линаду, в этом союзе чувствуется скрытая угроза.</p>
+            </div>
+
+            <h3>Антагонист<span>&#9660;</span></h3>
+            <div>
+                <p>Линад по сути не является типичным злодеем, он скорее антигерой или тёмное альтер-эго Данила. Его присутствие создаёт дисбаланс в мире, где действия главного героя становятся более мрачными и неясными. Однако, несмотря на свою роль как противоположность Данила, Линад помогает Данилу завершить некоторые миссии, хотя его истинные мотивы остаются загадкой. Таким образом, Линад играет важную роль в развитии истории, подталкивая Данила к более решительным действиям, пусть и через хаос.</p>
+            </div>
+
+            <h3>Итог <span>&#9660;</span></h3>
+            <div>
+                <p>Линад — это важный элемент вселенной "Новые Похождения", символизирующий внутренний конфликт и развитие главного героя. Он представляет собой тёмное отражение Данила, с которым главный герой вынужден столкнуться в финальной части своей истории.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Daniil Wiki © 2024</p>
+        <a href="https://t.me/+fCsZIsTJaZQzMzJk">Связь</a>
+    </div>
+
+    <script>
+        // Скрипт для открытия и закрытия разделов
+        const sections = document.querySelectorAll('.sections h3');
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                const content = section.nextElementSibling;
+                const arrow = section.querySelector('span');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.display = 'block';
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+
+</body>
+<script>
+    // Массив с URL случайных статей и функция randomArticle
+    const articles = [
+        'danil.html',
+        'Fyudjin.html',
+        'blue-haired.html',
+        'Boss-skeleton-pirate.html',
+        'Mike.html',
+        'Boss.html', 
+        'Alliance.html',
+        'Necroman.html',
+        'Bunker.html'
+    ];
+
+    function randomArticle() {
+        const randomArticleIndex = Math.floor(Math.random() * articles.length);
+        window.location.href = articles[randomArticleIndex];
+    }
+</script>
+</html>
